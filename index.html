@@ -173,8 +173,8 @@
 </div>
 <script>
 (function(){
-    // Même mot de passe que le dashboard SEA (hash SHA-256 identique).
-    const HASH = '53bec5284bf435e1772b5591b3103939538412eb6ad1e3bee31b56c741a12e36';
+    // Mot de passe dédié dashboard Meta (hash SHA-256 de "Sp@Meta").
+    const HASH = 'ff3cdbbe39e9f2328007035f1397a31121f88e683a20af744fc308493d359566';
     const KEY  = 'sp_ads_unlocked';
     const gate = document.getElementById('pwd-gate');
     if (sessionStorage.getItem(KEY) === '1') { gate.remove(); return; }
