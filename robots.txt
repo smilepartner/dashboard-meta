@@ -1,0 +1,33 @@
+# Dashboard privé SmilePartner — interdire toute indexation et tout crawl
+# À placer à la RACINE du domaine qui héberge le dashboard pour être pris en compte.
+
+User-agent: *
+Disallow: /
+
+# Robots IA / collecteurs de données explicitement bloqués (ceux qui respectent robots.txt)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
