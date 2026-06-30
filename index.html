@@ -313,10 +313,10 @@ Chart.defaults.plugins.datalabels = { display: false };
 //  CONFIG — à mettre à jour à chaque relevé
 // ══════════════════════════════════════════════════════════════════════
 const CFG = {
-    prospectsMeta: 536,        // prospects collectés dans le Google Sheet (Meta Lead Ads)
-    cout: 560,                 // budget Meta dépensé (€)
+    prospectsMeta: 547,        // prospects collectés dans le Google Sheet (Meta Lead Ads)
+    cout: 580,                 // budget Meta dépensé (€)
     lancement: '3 juin 2026',
-    maj: '29 juin 2026',
+    maj: '30 juin 2026',
     objConv: 0.03,             // objectif de taux de conversion (ventes / leads)
     cycleJours: '45 à 50',     // délai moyen lead → vente
     premieresVentes: 'la 2ᵉ quinzaine de juillet',  // = lancement + cycle
@@ -328,16 +328,16 @@ const CFG = {
 // ══════════════════════════════════════════════════════════════════════
   // ▒▒ SHEET-START ▒▒  (bloc généré par update.py — ne pas éditer à la main)
   const SHEET = {
-    total: 536,
+    total: 547,
     dailyFrom: '2026-06-03',   // 1re date de collecte ; daily = 1 valeur par jour consécutif
-    daily: [56, 44, 24, 25, 25, 17, 22, 20, 22, 14, 14, 16, 14, 12, 20, 20, 24, 13, 13, 18, 18, 16, 13, 9, 26, 17, 4],
-    platform: { fb: 275, ig: 261 },
-    crea: [512, 17, 6, 1],  // Vidéo M6, Vidéo TF1, Vidéo Frantz, Cas Maamar
-    q1: [242, 206, 30, 58],  // Toute ma dentition, Plusieurs dents, Une mâchoire, Je ne sais pas
-    q2: [150, 120, 115, 151],  // Dès que possible, Dans les 3 mois, Dans les 6 mois, Je me renseigne
-    q3: { oui: 187, non: 349 },
-    q4: [134, 115, 100, 187],  // Matin, Midi, Après-midi, Après 17 h
-    byCom: { FMC:84, ET:85, FD:86, CP:87, PL:69, JH:86, AV:39 },   // leads collectés par commercial assigné
+    daily: [56, 44, 24, 25, 25, 17, 22, 20, 22, 14, 14, 16, 14, 12, 20, 20, 24, 13, 13, 18, 18, 16, 13, 9, 26, 17, 10, 5],
+    platform: { fb: 281, ig: 266 },
+    crea: [523, 17, 6, 1],  // Vidéo M6, Vidéo TF1, Vidéo Frantz, Cas Maamar
+    q1: [245, 212, 31, 59],  // Toute ma dentition, Plusieurs dents, Une mâchoire, Je ne sais pas
+    q2: [153, 121, 116, 157],  // Dès que possible, Dans les 3 mois, Dans les 6 mois, Je me renseigne
+    q3: { oui: 192, non: 355 },
+    q4: [136, 116, 101, 194],  // Matin, Midi, Après-midi, Après 17 h
+    byCom: { FMC:86, ET:87, FD:88, CP:89, PL:69, JH:88, AV:40 },   // leads collectés par commercial assigné
   };
   // ▒▒ SHEET-END ▒▒
 
@@ -355,7 +355,11 @@ const COM_NAME = Object.fromEntries(COMS);
 const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','#eab308'];
 
   // ▒▒ REC-START ▒▒  (bloc généré par update.py — ne pas éditer à la main)
-  const REC=[["2026-06-29","FMC","C",""],
+  const REC=[["2026-06-30","ET","C",""],
+  ["2026-06-30","CP","C",""],
+  ["2026-06-29","CP","C",""],
+  ["2026-06-29","JH","C",""],
+  ["2026-06-29","FMC","C",""],
   ["2026-06-29","JH","C",""],
   ["2026-06-29","CP","C",""],
   ["2026-06-29","FMC","C",""],
@@ -403,10 +407,10 @@ const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','
   ["2026-06-15","FD","C",""],
   ["2026-06-15","ET","C",""],
   ["2026-06-15","PL","C",""],
-  ["2026-06-15","ET","SD","2026-06-22"],
+  ["2026-06-05","CP","SD","2026-06-11"],
   ["2026-06-15","CP","C",""],
   ["2026-06-15","ET","C",""],
-  ["2026-06-15","ET","SD","2026-06-24"],
+  ["2026-06-15","ET","SD","2026-06-22"],
   ["2026-06-15","FMC","C",""],
   ["2026-06-12","JH","C",""],
   ["2026-06-12","JH","C",""],
@@ -415,10 +419,10 @@ const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','
   ["2026-06-12","JH","C",""],
   ["2026-06-12","FD","C",""],
   ["2026-06-12","FMC","C",""],
-  ["2026-06-12","FMC","SD","2026-06-26"],
+  ["2026-06-15","ET","SD","2026-06-24"],
   ["2026-06-12","FMC","C",""],
   ["2026-06-12","FMC","C",""],
-  ["2026-06-11","PL","SD","2026-06-23"],
+  ["2026-06-09","FD","SD","2026-06-25"],
   ["2026-06-10","FMC","C",""],
   ["2026-06-10","ET","C",""],
   ["2026-06-10","FMC","C",""],
@@ -428,16 +432,16 @@ const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','
   ["2026-06-10","ET","C",""],
   ["2026-06-09","PL","C",""],
   ["2026-06-09","ET","P",""],
-  ["2026-06-09","FD","SD","2026-06-25"],
+  ["2026-06-09","FD","SD","2026-06-24"],
   ["2026-06-09","ET","C",""],
   ["2026-06-09","FD","C",""],
   ["2026-06-09","FMC","C",""],
   ["2026-06-09","AV","C",""],
-  ["2026-06-09","FD","SD","2026-06-24"],
+  ["2026-06-09","FD","SD","2026-06-23"],
   ["2026-06-09","FMC","C",""],
   ["2026-06-09","AV","C",""],
   ["2026-06-09","FD","C",""],
-  ["2026-06-09","FD","SD","2026-06-23"],
+  ["2026-06-12","FMC","SD","2026-06-26"],
   ["2026-06-09","FMC","C",""],
   ["2026-06-09","JH","C",""],
   ["2026-06-08","ET","C",""],
@@ -457,7 +461,7 @@ const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','
   ["2026-06-05","FD","C",""],
   ["2026-06-05","FMC","C",""],
   ["2026-06-05","CP","C",""],
-  ["2026-06-05","CP","SD","2026-06-11"],
+  ["2026-06-11","PL","SD","2026-06-23"],
   ["2026-06-05","JH","NC",""],
   ["2026-06-04","FMC","C",""],
   ["2026-06-04","CP","C",""],
