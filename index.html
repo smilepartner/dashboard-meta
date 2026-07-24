@@ -313,7 +313,7 @@ Chart.defaults.plugins.datalabels = { display: false };
 //  CONFIG — à mettre à jour à chaque relevé
 // ══════════════════════════════════════════════════════════════════════
 const CFG = {
-    prospectsMeta: 775,        // prospects collectés dans le Google Sheet (Meta Lead Ads)
+    prospectsMeta: 822,        // prospects collectés dans le Google Sheet (Meta Lead Ads)
     cout: 960,                 // budget Meta dépensé (€)
     lancement: '3 juin 2026',
     maj: '24 juillet 2026',
@@ -328,16 +328,16 @@ const CFG = {
 // ══════════════════════════════════════════════════════════════════════
   // ▒▒ SHEET-START ▒▒  (bloc généré par update.py — ne pas éditer à la main)
   const SHEET = {
-    total: 775,
+    total: 822,
     dailyFrom: '2026-06-03',   // 1re date de collecte ; daily = 1 valeur par jour consécutif
-    daily: [56, 44, 24, 25, 25, 17, 22, 20, 22, 14, 14, 16, 14, 12, 20, 20, 24, 13, 13, 18, 18, 16, 13, 9, 26, 17, 10, 9, 10, 13, 16, 14, 20, 10, 14, 15, 14, 11, 18, 18, 12, 13, 14, 9, 3],
-    platform: { fb: 420, ig: 355 },
-    crea: [699, 50, 25, 1],  // Vidéo M6, Vidéo TF1, Vidéo Frantz, Cas Maamar
-    q1: [350, 288, 48, 89],  // Toute ma dentition, Plusieurs dents, Une mâchoire, Je ne sais pas
-    q2: [209, 172, 160, 234],  // Dès que possible, Dans les 3 mois, Dans les 6 mois, Je me renseigne
-    q3: { oui: 281, non: 494 },
-    q4: [189, 148, 146, 292],  // Matin, Midi, Après-midi, Après 17 h
-    byCom: { FMC:128, ET:89, FD:122, CP:134, PL:106, JH:135, AV:61 },   // leads collectés par commercial assigné
+    daily: [56, 44, 24, 25, 25, 17, 22, 20, 22, 14, 14, 16, 14, 12, 20, 20, 24, 13, 13, 18, 18, 16, 13, 9, 26, 17, 10, 9, 10, 13, 16, 14, 20, 10, 14, 15, 14, 11, 18, 18, 12, 13, 14, 9, 9, 7, 4, 7, 6, 3, 11, 3],
+    platform: { fb: 452, ig: 370 },
+    crea: [745, 50, 26, 1],  // Vidéo M6, Vidéo TF1, Vidéo Frantz, Cas Maamar
+    q1: [376, 303, 50, 93],  // Toute ma dentition, Plusieurs dents, Une mâchoire, Je ne sais pas
+    q2: [216, 184, 169, 253],  // Dès que possible, Dans les 3 mois, Dans les 6 mois, Je me renseigne
+    q3: { oui: 298, non: 524 },
+    q4: [201, 157, 153, 311],  // Matin, Midi, Après-midi, Après 17 h
+    byCom: { FMC:133, ET:100, FD:128, CP:139, PL:113, JH:139, AV:67, JL:3 },   // leads collectés par commercial assigné
   };
   // ▒▒ SHEET-END ▒▒
 
@@ -350,9 +350,9 @@ const SLAB = { NC:'Prospect non contacté', C:'Prospect contacté', AD:'En atten
 //  non contacté = rose · contacté = jaune · en attente de devis = blanc
 //  sous-devis = orange · Patient/Sous-Garantie (dossier vendu) = rouge · Désactivé/Perdu (projet clos) = gris clair
 const SCOLOR = { NC:'#ec4899', C:'#eab308', AD:'#f1f5f9', SD:'#f59e0b', PAT:'#ef4444', SG:'#ef4444', P:'#cbd5e1', D:'#cbd5e1', '?':'#64748b' };
-const COMS = [['FMC','Florent'],['ET','Eliott'],['FD','Fabian'],['CP','Charles'],['PL','Paul'],['JH','Julien'],['AV','Ayane']];
+const COMS = [['FMC','Florent'],['ET','Eliott'],['FD','Fabian'],['CP','Charles'],['PL','Paul'],['JH','Julien'],['AV','Ayane'],['JL','Johnny']];
 const COM_NAME = Object.fromEntries(COMS);
-const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','#eab308'];
+const COM_COLOR = ['#3b82f6','#22c55e','#f59e0b','#a855f7','#06b6d4','#ec4899','#eab308','#14b8a6'];
 
   // ▒▒ REC-START ▒▒  (bloc généré par update.py — ne pas éditer à la main)
   const REC=[["2026-07-24","JL","C",""],
